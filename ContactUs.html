@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Calibrate Motors</title>
+    <link rel="stylesheet" href="FirstPage.css">
+  
+</head>
+<body>
+    <nav id="navbar">
+        <a href="#" class="logo">Calibrate<span>Motors</span></a>
+        <ul class="nav-links">
+            <li><a href="FirstPage.html">Home</a></li>
+            <li><a href="Inventory.html">Inventory</a></li>
+            <li><a href="Services.html">Services</a></li>
+            <li><a href="AboutUs.html">About Us</a></li>
+            <li><a href="" class="active">Contact</a></li>
+        </ul>
+        <span ><a href="LogInPage.html" class="nav-btn">Log In</a></span>
+    </nav>
+
+    <header class="page-header">
+        <h1>Contact Us</h1>
+        <p>We're here to answer any questions you might have about our vehicles, services, or dealership.</p>
+    </header>
+
+    <section class="contact-container">
+        <div class="contact-info">
+            <h3>Get In Touch</h3>
+            
+            <div class="info-item">
+                <div class="icon">📍</div>
+                <div class="content">
+                    <h4>Visit Us</h4>
+                    <p>123 Luxury Drive</p>
+                    <p>Los Angeles, CA 90001</p>
+                </div>
+            </div>
+            
+            <div class="info-item">
+                <div class="icon">📞</div>
+                <div class="content">
+                    <h4>Call Us</h4>
+                    <p>Sales: +1 (800) 555-CARS</p>
+                    <p>Service: +1 (800) 555-SERV</p>
+                </div>
+            </div>
+            
+            <div class="info-item">
+                <div class="icon">✉️</div>
+                <div class="content">
+                    <h4>Email Us</h4>
+                    <p>Sales: <a href="mailto:sales@calibratemotors.com">sales@calibratemotors.com</a></p>
+                    <p>Service: <a href="mailto:sales@calibratemotors.com">service@calibratemotors.com</a></p>
+                </div>
+            </div>
+            
+            <div class="info-item">
+                <div class="icon">🕒</div>
+                <div class="content">
+                    <h4>Business Hours</h4>
+                    <p>Monday - Saturday: 9:00 AM - 7:00 PM</p>
+                    <p>Sunday: By Appointment Only</p>
+                </div>
+            </div>
+            
+            <div class="info-item">
+                <div class="icon">👥</div>
+                <div class="content">
+                    <h4>Follow Us</h4>
+                    <div class="footer-social" style="margin-top: 10px;">
+                        <a href="https://www.facebook.com" target="_blank" class="social-icon">f</a>
+                        <a href="https://www.linkedIn.com" target="_blank" class="social-icon">in</a>
+                        <a href="https://www.instagram.com" target="_blank" class="social-icon">ig</a>
+                        <a href="https://www.youtube.com" target="_blank" class="social-icon">yt</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="contact-form">
+            <h3>Send Us a Message</h3>
+            <form id="contactForm"  method="post">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" class="form-control">
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <select id="subject" name="subject" class="form-control" required>
+                        <option value="">Select a subject</option>
+                        <option value="sales">Vehicle Sales</option>
+                        <option value="service">Service Department</option>
+                        <option value="parts">Parts & Accessories</option>
+                        <option value="finance">Financing Options</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" class="form-control" required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn" onclick="scheduleApp(event)">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <span class="footer-logo">Calibrate<span style="color: #e94e77;">Motors</span></span>
+                <p class="footer-desc">Elevating your driving experience with a curated selection of luxury vehicles and exceptional service.</p>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com" target="_blank" class="social-icon">f</a>
+                    <a href="https://www.linkedIn.com" target="_blank" class="social-icon">in</a>
+                    <a href="https://www.instagram.com" target="_blank" class="social-icon">ig</a>
+                    <a href="https://www.youtube.com" target="_blank" class="social-icon">yt</a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="footer-heading">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="FirstPage.html">Home</a></li>
+                    <li><a href="#">Inventory</a></li>
+                    <li><a href="Services.html">Services</a></li>
+                    <li><a href="AboutUs.html">About Us</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-heading">Services</h4>
+                <ul class="footer-links">
+                    <li><a href="Services.html">Saved Searches</a></li>
+                    <li><a href="Services.html">Direct Messaging</a></li>
+                    <li><a href="Services.html">Advanced Search</a></li>
+                    <li><a href="Services.html">Car Valuation</a></li>
+                    <li><a href="Services.html">Listing Management</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-heading">Contact Us</h4>
+                <ul class="footer-links">
+                    <li><a href="" target="_blank">123 Luxury Drive, Los Angeles, CA</a></li>
+                    <li><a href="mailto:sales@calibratemotors.com">sales@calibratemotors.com</a></li>
+                    <li><a href="tel:+1 (800) 555-CARS">+1 (800) 555-CARS</a></li>
+                    <li><a href="">Mon - Sat: 9:00 AM - 7:00 PM</a></li>
+                    <li><a href="">Sunday: By Appointment</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2025 Calibrate Motors. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="ContactUs.js">
+       
+    </script>
+</body>
+</html>

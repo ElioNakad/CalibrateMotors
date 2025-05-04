@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calibrate Motors | Luxury Car Experience</title>
+    <link rel="stylesheet" href="FirstPage.css">
+</head>
+<body>
+    <nav id="navbar">
+        <a href="#" class="logo">Calibrate<span>Motors</span></a>
+        <ul class="nav-links">
+            <li><a href="FirstPage.html">Home</a></li>
+            <li><a href="#">Inventory</a></li>
+            <li><a href="Services.html">Services</a></li>
+            <li><a href="AboutUs.html">About Us</a></li>
+            <li><a href="ContactUs.html">Contact</a></li>
+        </ul>
+        <span><a href="LogInPage.html"  class="nav-btn">Log In</a></span>
+    </nav>
+
+
+    <section class="featured">
+        <div class="section-header">
+            <h2 class="section-title">Featured Vehicles</h2>
+            <p class="section-subtitle">Browse our latest collection of premium cars that combine luxury, performance, and style.</p>
+        </div>
+        <div class="filter-bar">
+            <input type="text" id="searchInput" placeholder="Search by name or make...">
+            <select id="makeFilter">
+                <option value="">All Makes</option>
+            </select>
+            <input type="number" id="priceFilter" placeholder="Max Price">
+            <button id="showAllBtn">Show All</button>
+            <button id="showMyCarsBtn">Show My Cars</button>
+        </div>
+        
+        <div class="cars-grid">
+
+
+        </div>
+
+    </section>
+
+
+    
+    <footer>
+        <div class="footer-content">
+            <div>
+                <span class="footer-logo">Calibrate<span style="color: #e94e77;">Motors</span></span>
+                <p class="footer-desc">Elevating your driving experience with a curated selection of luxury vehicles and exceptional service.</p>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com" target="_blank" class="social-icon">f</a>
+                    <a href="https://www.linkedIn.com" target="_blank" class="social-icon">in</a>
+                    <a href="https://www.instagram.com" target="_blank" class="social-icon">ig</a>
+                    <a href="https://www.youtube.com" target="_blank" class="social-icon">yt</a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="footer-heading">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Inventory</a></li>
+                    <li><a href="Services.html">Services</a></li>
+                    <li><a href="AboutUs.html">About Us</a></li>
+                    <li><a href="ContactUs.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-heading">Services</h4>
+                <ul class="footer-links">
+                    <li><a href="Services.html">Saved Searches</a></li>
+                    <li><a href="Services.html">Direct Messaging</a></li>
+                    <li><a href="Services.html">Advanced Search</a></li>
+                    <li><a href="Services.html">Car Valuation</a></li>
+                    <li><a href="Services.html">Listing Management</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-heading">Contact Us</h4>
+                <ul class="footer-links">
+                    <li><a href="" target="_blank">123 Luxury Drive, Los Angeles, CA</a></li>
+                    <li><a href="mailto:sales@calibratemotors.com">sales@calibratemotors.com</a></li>
+                    <li><a href="tel:+1 (800) 555-CARS">+1 (800) 555-CARS</a></li>
+                    <li><a href="">Mon - Sat: 9:00 AM - 7:00 PM</a></li>
+                    <li><a href="">Sunday: By Appointment</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2025 Calibrate Motors. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+
+    <div id="carModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-bg-overlay"></div>
+            <div class="modal-info fade-in">
+                <div class="modal-header">
+                    <h2 class="modal-title">Car Name</h2>
+                    <button class="close-modal" onclick="closeModal()">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-specs">
+                        <div class="modal-spec">
+                            <strong>Year</strong>
+                            <span id="modal-year">2023</span>
+                        </div>
+                        <div class="modal-spec">
+                            <strong>Price</strong>
+                            <span id="modal-price">$0</span>
+                        </div>
+                        <div class="modal-spec">
+                            <strong>Power</strong>
+                            <span id="modal-power">0 HP</span>
+                        </div>
+                        <div class="modal-spec">
+                            <strong>Fuel Type</strong>
+                            <span id="modal-fuel">Unknown</span>
+                        </div>
+                    </div>
+                    <div class="modal-description">
+                        <p id="modal-description">
+                            This luxury vehicle combines exceptional performance with sophisticated design. Featuring cutting-edge technology and premium materials throughout the cabin, this car delivers an unparalleled driving experience.
+                        </p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="modal-btn modal-btn-secondary" id="scheduleTest" onclick="alert('Test drive scheduling feature coming soon!')">Schedule Test Drive</button>
+                    <button class="modal-btn modal-btn-primary" id="inquireBtn" onclick="alert('Inquiry form will be available soon!')">Inquire Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="Inventory.js"></script>

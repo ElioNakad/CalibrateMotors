@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Calibrate Motors</title>
+    <link rel="stylesheet" href="FirstPage.css">
+    <style>
+     /* Base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Hero section */
+.service-hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('buysell.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 120px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.service-hero h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 20px;
+}
+
+.service-hero p {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Services section */
+.services-container {
+    padding: 80px 5%;
+    width: 100%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    width: 100%;
+}
+
+.service-content {
+    background-color: white;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.service-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.service-content h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.service-content p {
+    color: #666;
+    flex-grow: 1;
+}
+
+/* Appointment section */
+.appointment-section {
+    background-color: #f8f8f8;
+    padding: 80px 5%;
+    text-align: center;
+    width: 100%;
+}
+
+.appointment-form {
+    max-width: 700px;
+    margin: 40px auto 0;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.submit-btn {
+    background-color: #e94e77;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background-color: #d43d66;
+}
+
+/* Testimonials section */
+.testimonials {
+    padding: 80px 5%;
+    background-color: white;
+    width: 100%;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    width: 100%;
+}
+
+.testimonial-card {
+    background-color: #f8f8f8;
+    padding: 25px;
+    border-radius: 10px;
+    position: relative;
+    height: 100%;
+}
+
+.testimonial-card:before {
+    content: '"';
+    font-size: 5rem;
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    color: #e94e77;
+    opacity: 0.3;
+}
+
+.testimonial-text {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #555;
+    font-style: italic;
+}
+
+.testimonial-author {
+    font-weight: 600;
+    color: #333;
+}
+
+.testimonial-author span {
+    font-weight: normal;
+    color: #888;
+    font-size: 0.9rem;
+    display: block;
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+    .service-grid,
+    .testimonial-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    
+    .appointment-form {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .service-hero {
+        padding: 80px 0;
+    }
+    
+    .services-container,
+    .appointment-section,
+    .testimonials {
+        padding: 60px 5%;
+    }
+    
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .service-hero {
+        padding: 60px 0;
+    }
+    
+    .appointment-form {
+        padding: 20px;
+    }
+    
+    .form-control {
+        padding: 10px;
+    }
+    
+    .submit-btn {
+        padding: 10px 20px;
+    }
+}
+    </style>
+</head>
+<body>
+    
+    <nav id="navbar">
+        <span class="logo">Calibrate<span>Motors</span></span>
+        <ul class="nav-links">
+            <li><a href="FirstPage.html">Home</a></li>
+            <li><a href="Inventory.html">Inventory</a></li>
+            <li><a href="Services.html" class="active">Services</a></li>
+            <li><a href="AboutUs.html">About Us</a></li>
+            <li><a href="ContactUs.html">Contact</a></li>
+        </ul>
+        <span ><a href="LogInPage.html" class="nav-btn">Log In</a></span>
+    </nav>
+
+    
+    <section class="service-hero">
+        <div class="container">
+            <h1>Premier Automotive Services</h1>
+            <p>Experience unparalleled care for your luxury vehicle with our comprehensive range of services designed to maintain appearance, and value.</p>
+        </div>
+    </section>
+
+    
+    <section class="services-container">
+        <div class="section-header">
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-subtitle">We offer a complete suite of premium automotive services tailored to meet the exacting standards of luxury vehicle owners.</p>
+        </div>
+
+        <div class="service-grid">
+            
+                <div class="service-content">
+                    <h3>Car Listings</h3>
+                    <p>Create detailed listings with high-quality photos and complete specifications to showcase your vehicle to potential buyers looking for their next car.</p>
+                </div>
+        
+           
+                <div class="service-content">
+                    <h3>Advanced Search</h3>
+                    <p>Find your perfect vehicle using our comprehensive search filters including make, model, year, price range, mileage, and other important specifications.</p>
+                </div>
+        
+           
+                <div class="service-content">
+                    <h3>Direct Messaging</h3>
+                    <p>Connect directly with sellers or buyers through our secure messaging system to ask questions, negotiate price, or arrange test drives easily.</p>
+                </div>
+        
+           
+                <div class="service-content">
+                    <h3>Saved Searches</h3>
+                    <p>Save your search criteria and receive notifications when new listings match your preferences, so you never miss out on your dream car.</p>
+                </div>
+        
+            
+                <div class="service-content">
+                    <h3>Car Valuation</h3>
+                    <p>Get an accurate estimate of your car's market value based on make, model, year, condition, and recent comparable sales in your area.</p>
+                </div>
+        
+           
+                <div class="service-content">
+                    <h3>Listing Management</h3>
+                    <p>Easily update, edit or remove your listings as needed, track views and inquiries, and mark as sold when your car finds a new owner.</p>
+                </div>
+        </div>
+        </section>
+    </section>
+
+    
+    <section class="appointment-section" id="app">
+        <div class="section-header">
+            <h2 class="section-title"  style="color: #333;">Sell your car at Any Time Any Place</h2>
+        </div>
+
+        <form class="appointment-form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" class="form-control" placeholder="Make, Model, Year(be aware of spacing and commas)" required>
+            </div>
+           
+            <div class="form-group">
+                <label for="price">Price</label>
+                <input type="text" id="price" class="form-control" placeholder="Your price" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="power">Power</label>
+                <input type="text" id="power" class="form-control" placeholder="horse power" required>
+            </div>
+
+            <div class="form-group">
+                <label for="image">Upload an image of your vehicule</label>
+                <input type="file"  id="fileInput" required accept="image/*" />
+                <img id="previewImage" style="max-width: 300px;" />
+                
+            </div>
+         
+            <div class="form-group">
+                <label for="service">Select your fuel type</label>
+                <select id="fuel" class="form-control" required>
+                    <option value="" disabled selected>Select your fuel type</option>
+                    <option value="Gasoline">Gasoline</option>
+                    <option value="Diesel">Diesel</option>
+                    <option value="Ethanol">Ethanol</option>
+                    <option value="Biodiesel">Biodiesel</option>
+                    <option value="CNG">CNG</option>
+                    <option value="LPG ">LPG</option>
+                    <option value="Hydrogen">Hydrogen</option>
+                    <option value=" Electric"> Electric</option>
+                    <option value="PHEV">PHEV</option>
+                    <option value=" Hybrid (HEV)"> Hybrid (HEV)</option>
+                </select>
+            </div>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="service">Select your location</label>
+                <select id="location" class="form-control" required>
+                    <option value="" disabled selected>Select your location</option>
+                    <option value="Texas">Texas</option>
+                    <option value="New York">New York</option>
+                    <option value="Miami">Miami</option>
+                    <option value="LA">LA</option>
+                    <option value="other">Other (Please specify in the description)</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="notes">Enter the description</label>
+                <textarea id="description" class="form-control" rows="4" placeholder="Please provide any specific details" required></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn" onclick="scheduleApp(event)">Post car for sale</button>
+        </form>
+    </section>
+
+   
+    <section class="testimonials">
+        <div class="section-header">
+            <h2 class="section-title" style="color: black">What Our Clients Say</h2>
+            <p class="section-subtitle">Discover why luxury vehicle owners trust Calibrate Motors for all their service needs.</p>
+        </div>
+
+        <div class="testimonial-grid">
+            
+            <div class="testimonial-card">
+                <p class="testimonial-text">The technicians at Calibrate Motors treat my Porsche like it's their own. Their attention to detail and commitment to excellence is unmatched in the industry.</p>
+                <p class="testimonial-author">Michael R. <span>Porsche 911 Owner</span></p>
+            </div>
+
+            
+            <div class="testimonial-card">
+                <p class="testimonial-text">After trying several service centers, I finally found a place that understands luxury vehicles. Their factory-spec maintenance has kept my Mercedes performing flawlessly.</p>
+                <p class="testimonial-author">Sarah L. <span>Mercedes S-Class Owner</span></p>
+            </div>
+
+          
+            <div class="testimonial-card">
+                <p class="testimonial-text">The concierge service is a game-changer. They picked up my BMW, serviced it, and returned it detailed and ready to go. Truly a premium experience from start to finish.</p>
+                <p class="testimonial-author">James T. <span>BMW 7 Series Owner</span></p>
+            </div>
+
+
+            <div class="testimonial-card">
+                <p class="testimonial-text">From scheduling to service, everything was seamless. The team handled my Audi with expert care, and the performance has never felt better. Highly recommend Calibrate Motors!</p>
+                <p class="testimonial-author">Emily K. <span>Audi A7 Owner</span></p>
+              </div>
+              
+        </div>
+    </section>
+
+   
+    <footer>
+        <div class="footer-content">
+            <div>
+                <span class="footer-logo">Calibrate<span style="color: #e94e77;">Motors</span></span>
+                <p class="footer-desc">Elevating your driving experience with a curated selection of luxury vehicles and exceptional service.</p>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com" target="_blank" class="social-icon">f</a>
+                    <a href="https://www.linkedIn.com" target="_blank" class="social-icon">in</a>
+                    <a href="https://www.instagram.com" target="_blank" class="social-icon">ig</a>
+                    <a href="https://www.youtube.com" target="_blank" class="social-icon">yt</a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="footer-heading">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="FirstPage.html">Home</a></li>
+                    <li><a href="Inventory.html">Inventory</a></li>
+                    <li><a href="Services.html">Services</a></li>
+                    <li><a href="AboutUs.html">About Us</a></li>
+                    <li><a href="ContactUs.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-heading">Services</h4>
+                <ul class="footer-links">
+                    <li><a href="Services.html">Saved Searches</a></li>
+                    <li><a href="Services.html">Direct Messaging</a></li>
+                    <li><a href="Services.html">Advanced Search</a></li>
+                    <li><a href="Services.html">Car Valuation</a></li>
+                    <li><a href="Services.html">Listing Management</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-heading">Contact Us</h4>
+                <ul class="footer-links">
+                    <li><a href="#app" target="_blank">123 Luxury Drive, Los Angeles, CA</a></li>
+                    <li><a href="mailto:service@calibratemotors.com">service@calibratemotors.com</a></li>
+                    <li><a href="tel:+1 (800) 555-CARS">+1 (800) 555-CARS</a></li>
+                    <li><a href="#app">Mon - Sat: 9:00 AM - 7:00 PM</a></li>
+                    <li><a href="#app">Sunday: By Appointment</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2025 Calibrate Motors. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+
+    <script src="Services.js">
+       
+    </script>
+</body>
+</html>
